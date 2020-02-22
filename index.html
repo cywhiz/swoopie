@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SWOOPIE</title>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCghkflS7rVe6msnwgFYmYwwA_noh5ZdvI"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <img src="img/logo.png">
+    <div id="events">
+    <select id="event" name="event">
+        <option value="000">-Select Event-</option>
+    </select>
+    </div>
+  </div>
+  <div id="map_canvas"></div>
+  <div class="actions">
+      <div class="button">
+          <label for="gmap_keyword">Looking for:</label>
+          <input id="gmap_keyword" type="text" name="gmap_keyword" /></div>
+      <div class="button">
+          <label for="gmap_type">Type:</label>
+          <select id="gmap_type">
+              <option value="pizza">pizza</option>
+              <option value="coffee">coffee</option>
+              <option value="bank">bank</option>
+          </select>
+      </div>
+      <div class="button">
+          <label for="gmap_radius">Radius:</label>
+          <select id="gmap_radius">
+              <option value="500">500</option>
+              <option value="1000">1000</option>
+              <option value="1500">1500</option>
+              <option value="5000">5000</option>
+          </select>
+      </div>
+      <input type="hidden" id="lat" name="lat" value="40.7143528" />
+      <input type="hidden" id="lng" name="lng" value="-74.0059731" />
+      <div id="button1" class="button" onclick="findPlaces(); return false;">GO!</div>
+  </div>
+</div>
+
+</body>
+</html>
